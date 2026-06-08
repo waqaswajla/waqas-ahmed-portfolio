@@ -57,7 +57,7 @@
 
 .what-noTouch:hover,
 .what-content-active {
-  min-height: 67%;
+  min-height: 72%;
   padding: 40px 50px;
 }
 
@@ -264,10 +264,59 @@
 .what-tags {
   font-size: 13px;
   font-weight: 400;
-  padding: 2px 7px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid #ffffff50;
+  padding: 4px 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
+  cursor: default;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              color 0.3s ease;
+  display: inline-block;
+  animation: floatIn 0.4s ease forwards;
+  opacity: 0;
+}
+
+.what-tags:nth-child(1)  { animation-delay: 0.05s; }
+.what-tags:nth-child(2)  { animation-delay: 0.10s; }
+.what-tags:nth-child(3)  { animation-delay: 0.15s; }
+.what-tags:nth-child(4)  { animation-delay: 0.20s; }
+.what-tags:nth-child(5)  { animation-delay: 0.25s; }
+.what-tags:nth-child(6)  { animation-delay: 0.30s; }
+.what-tags:nth-child(7)  { animation-delay: 0.35s; }
+.what-tags:nth-child(8)  { animation-delay: 0.40s; }
+.what-tags:nth-child(9)  { animation-delay: 0.45s; }
+.what-tags:nth-child(10) { animation-delay: 0.50s; }
+.what-tags:nth-child(11) { animation-delay: 0.55s; }
+.what-tags:nth-child(12) { animation-delay: 0.60s; }
+.what-tags:nth-child(13) { animation-delay: 0.65s; }
+.what-tags:nth-child(14) { animation-delay: 0.70s; }
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.what-tags:hover {
+  transform: translateY(-6px) scale(1.08);
+  background-color: var(--accentColor);
+  border-color: var(--accentColor);
+  color: #0b080c;
+  box-shadow: 0 8px 24px rgba(194, 164, 255, 0.35);
+}
+
+[data-theme="light"] .what-tags {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .what-tags:hover {
+  background-color: var(--accentColor);
+  border-color: var(--accentColor);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
 }
 
 @media only screen and (max-width: 1600px) {

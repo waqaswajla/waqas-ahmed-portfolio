@@ -1,0 +1,113 @@
+.stats-section {
+  width: 100%;
+  background-color: var(--backgroundColor);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--backgroundColor);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.35s ease;
+  gap: 8px;
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-card:hover {
+  background: rgba(56,189,248,0.05);
+}
+
+.stat-number {
+  font-size: 58px;
+  font-weight: 700;
+  color: var(--accentColor);
+  line-height: 1;
+  letter-spacing: -1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--textColor);
+  margin-top: 4px;
+}
+
+.stat-sub {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.3px;
+}
+
+[data-theme="light"] .stats-section {
+  border-color: rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .stat-card {
+  border-right-color: rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .stat-sub {
+  color: rgba(0,0,0,0.4);
+}
+
+@media (max-width: 1400px) {
+  .stats-grid {
+    max-width: 900px;
+  }
+  .stat-number {
+    font-size: 48px;
+  }
+  .stat-card {
+    padding: 50px 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+  .stat-card:nth-child(2) {
+    border-right: none;
+  }
+  .stat-card:nth-child(1),
+  .stat-card:nth-child(2) {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  [data-theme="light"] .stat-card:nth-child(1),
+  [data-theme="light"] .stat-card:nth-child(2) {
+    border-bottom-color: rgba(0,0,0,0.08);
+  }
+  .stat-number {
+    font-size: 42px;
+  }
+  .stat-card {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-number {
+    font-size: 34px;
+  }
+  .stat-card {
+    padding: 30px 16px;
+  }
+}

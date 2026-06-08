@@ -1,14 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import Lenis from "lenis";
 import "./styles/Navbar.css";
+import { useTheme } from "../context/ThemeContext";
 
 gsap.registerPlugin(ScrollTrigger);
 export let lenis: Lenis | null = null;
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
+  const progressRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Initialize Lenis smooth scroll
     lenis = new Lenis({
@@ -24,6 +28,13 @@ const Navbar = () => {
 
     // Start paused
     lenis.stop();
+
+    // Scroll progress bar
+    lenis.on("scroll", (e: { progress: number }) => {
+      if (progressRef.current) {
+        progressRef.current.style.width = `${e.progress * 100}%`;
+      }
+    });
 
     // Handle smooth scroll animation frame
     function raf(time: number) {
@@ -65,17 +76,26 @@ const Navbar = () => {
   }, []);
   return (
     <>
+      <div className="scroll-progress-bar" ref={progressRef} />
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          RH
+          WA
         </a>
         <a
-          href="mailto:redoyanul1234@gmail.com"
+          href="mailto:waqasahmed.da@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          redoyanul1234@gmail.com
+          waqasahmed.da@gmail.com
         </a>
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          data-cursor="disable"
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
         <ul>
           <li>
             <a data-href="#about" href="#about">

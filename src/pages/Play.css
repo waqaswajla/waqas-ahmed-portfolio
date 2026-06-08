@@ -39,8 +39,8 @@ body:has(.play-page) {
   right: -100px;
   width: 250px;
   height: 250px;
-  background-color: #c2a4ff;
-  box-shadow: inset -30px 30px 40px rgba(84, 0, 255, 0.5);
+  background-color: #38bdf8;
+  box-shadow: inset -30px 30px 40px rgba(2, 132, 199, 0.5);
   filter: blur(70px);
   border-radius: 50%;
   opacity: 0.4;

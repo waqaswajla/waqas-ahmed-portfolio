@@ -1,11 +1,13 @@
 import { PropsWithChildren, useEffect, useState } from "react";
 import About from "./About";
 import Career from "./Career";
+import Certifications from "./Certifications";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
+import StatsCounter from "./StatsCounter";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import TechStackNew from "./TechStackNew";
@@ -39,8 +41,10 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <div className="container-main">
         <Landing />
         <About />
+        <StatsCounter />
         <WhatIDo />
         <Career />
+        <Certifications />
         <Work />
         <TechStackNew />
         <CallToAction />

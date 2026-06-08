@@ -1,0 +1,143 @@
+.certs-section {
+  padding: 80px 0 60px;
+  margin: auto;
+}
+
+.certs-title {
+  font-size: 60px;
+  font-weight: 500;
+  margin: 0 0 50px 0;
+  text-transform: uppercase;
+}
+
+.certs-title span {
+  color: var(--accentColor);
+}
+
+.certs-grid {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  overflow: hidden;
+  gap: 1px;
+  background: rgba(255,255,255,0.07);
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  background-color: var(--backgroundColor);
+  transition: background 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.cert-card::after {
+  content: "↗";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: rgba(255,255,255,0.2);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.cert-card:hover {
+  background: rgba(56,189,248,0.04);
+}
+
+.cert-card:hover::after {
+  color: var(--accentColor);
+  transform: translateY(-50%) translate(3px, -3px);
+}
+
+.cert-icon-wrap {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.cert-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-name {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+  color: var(--textColor);
+}
+
+.cert-issuer {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 300;
+}
+
+.cert-badge {
+  font-size: 12px;
+  color: var(--accentColor);
+  font-weight: 500;
+  background: rgba(56,189,248,0.08);
+  border: 1px solid rgba(56,189,248,0.2);
+  padding: 4px 14px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  margin-right: 44px;
+}
+
+[data-theme="light"] .certs-grid {
+  background: rgba(0,0,0,0.07);
+  border-color: rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .cert-issuer {
+  color: rgba(0,0,0,0.45);
+}
+
+[data-theme="light"] .cert-icon-wrap {
+  background: rgba(0,0,0,0.04);
+}
+
+[data-theme="light"] .cert-card::after {
+  color: rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .certs-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .cert-card {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+  .cert-card::after {
+    right: 16px;
+  }
+  .cert-name {
+    font-size: 13px;
+  }
+  .cert-badge {
+    margin-right: 28px;
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+}

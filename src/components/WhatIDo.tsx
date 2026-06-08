@@ -9,19 +9,20 @@ const WhatIDo = () => {
     containerRef.current[index] = el;
   };
   useEffect(() => {
-    if (ScrollTrigger.isTouch) {
-      containerRef.current.forEach((container) => {
-        if (container) {
+    const handlers: Array<{ container: HTMLDivElement; handler: () => void }> = [];
+    containerRef.current.forEach((container) => {
+      if (container) {
+        if (ScrollTrigger.isTouch) {
           container.classList.remove("what-noTouch");
-          container.addEventListener("click", () => handleClick(container));
         }
-      });
-    }
+        const handler = () => handleClick(container);
+        container.addEventListener("click", handler);
+        handlers.push({ container, handler });
+      }
+    });
     return () => {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.removeEventListener("click", () => handleClick(container));
-        }
+      handlers.forEach(({ container, handler }) => {
+        container.removeEventListener("click", handler);
       });
     };
   }, []);
@@ -90,10 +91,6 @@ const WhatIDo = () => {
             <div className="what-content-in">
               <h3>{config.skills.develop.title}</h3>
               <h4>{config.skills.develop.description}</h4>
-              <p>
-                {config.skills.develop.details}
-              </p>
-              <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 {config.skills.develop.tools.map((tool, index) => (
                   <div key={index} className="what-tags">{tool}</div>
@@ -123,10 +120,6 @@ const WhatIDo = () => {
             <div className="what-content-in">
               <h3>{config.skills.design.title}</h3>
               <h4>{config.skills.design.description}</h4>
-              <p>
-                {config.skills.design.details}
-              </p>
-              <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 {config.skills.design.tools.map((tool, index) => (
                   <div key={index} className="what-tags">{tool}</div>

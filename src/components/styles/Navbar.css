@@ -1,3 +1,16 @@
+/* Scroll progress bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accentColor), rgba(56,189,248,0.4));
+  z-index: 99999;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
 .header {
   display: flex;
   max-width: var(--cMaxWidth);
@@ -65,6 +78,35 @@
   .navbar-connect {
     display: block;
   }
+}
+
+.theme-toggle {
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+  color: inherit;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accentColor);
+  background: rgba(56,189,248,0.1);
+}
+
+[data-theme="light"] .theme-toggle {
+  border-color: rgba(0,0,0,0.15);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+  border-color: var(--accentColor);
+  background: rgba(2,132,199,0.08);
 }
 @media only screen and (min-width: 1200px) {
   .header {
