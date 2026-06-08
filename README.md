@@ -1,6 +1,6 @@
 # Waqas Ahmed — Data Analyst & Business Analyst Portfolio
 
-[![Portfolio Preview](https://raw.githubusercontent.com/waqaswajla/waqaswajla/main/screnshot.png)](https://waqas-ahmed-portfolio.vercel.app)
+[![Portfolio Preview](https://raw.githubusercontent.com/waqaswajla/waqas-ahmed-portfolio/main/public/images/screnshot.png)](https://waqas-ahmed-portfolio.vercel.app)
 
 🔗 **Live Site:** [waqas-ahmed-portfolio.vercel.app](https://waqas-ahmed-portfolio.vercel.app)
 
