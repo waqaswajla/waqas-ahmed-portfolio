@@ -8,24 +8,36 @@ export const config = {
     social: {
         github: "waqaswajla",
         email: "waqasahmed.da@gmail.com",
-        location: "Taxila, Pakistan"
+        location: "Islamabad, Pakistan"
     },
     about: {
         title: "About Me",
-        description: "Final-year Computer Science student specializing in Data Science with hands-on experience in SQL, Power BI, Python, Excel, and ETL processes. Delivered analytical dashboards, churn prediction models, and machine learning projects using real-world datasets through internships and academic projects."
+        description: "BSCS graduate specializing in Data Science with hands-on experience in SQL, Power BI, Python, Excel, and ETL processes. Delivered analytical dashboards, churn prediction models, and machine learning projects using real-world datasets through internships and academic projects. Currently building SaaS products at Fine IT."
     },
     experiences: [
+        {
+            position: "SaaS Product Intern",
+            company: "Fine IT",
+            period: "2026 – Present",
+            location: "Islamabad, Pakistan",
+            description: "Building SaaS products end-to-end, from idea through to deployment.",
+            responsibilities: [
+                "Building and shipping SaaS product features end-to-end",
+                "Collaborating on product decisions from idea to deployment"
+            ],
+            technologies: ["SaaS", "Product Development"]
+        },
         {
             position: "BS Computer Science",
             company: "HITEC University, Taxila",
             period: "Sep 2022 – Jul 2026",
             location: "Taxila, Pakistan",
-            description: "Final-year Computer Science student specializing in Data Science. Built Pakistan Sign Language Recognition System as Final Year Project achieving 98.6% accuracy. Relevant coursework includes Machine Learning, Database Systems, and Statistics.",
+            description: "Graduated with a specialization in Data Science. Built Pakistan Sign Language Recognition System as Final Year Project achieving 98.6% accuracy. Relevant coursework included Machine Learning, Database Systems, and Statistics.",
             responsibilities: [
                 "Built Pakistan Sign Language Recognition System as Final Year Project achieving 98.6% accuracy",
-                "Specializing in Data Science and Machine Learning",
+                "Specialized in Data Science and Machine Learning",
                 "Coursework: Machine Learning, Database Systems, Statistics",
-                "Applying academic knowledge to internship and real-world projects"
+                "Applied academic knowledge to internship and real-world projects"
             ],
             technologies: ["Python", "SQL", "Machine Learning", "Statistics", "Database Systems"]
         },

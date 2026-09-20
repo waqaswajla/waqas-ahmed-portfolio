@@ -14,7 +14,7 @@ const STATS: Stat[] = [
   { prefix: "$", value: 1.1, suffix: "M+", label: "Revenue Analyzed",    sub: "Superstore & Telecom dashboards", decimals: 1 },
   { prefix: "",  value: 99,  suffix: "%+", label: "ML Model Accuracy",   sub: "LSTM Human Activity Recognition", decimals: 0 },
   { prefix: "",  value: 5,   suffix: "",   label: "Projects Delivered",  sub: "BI · ML · Computer Vision",       decimals: 0 },
-  { prefix: "",  value: 2,   suffix: "",   label: "Internships",         sub: "Developers Hub · ITSOLERA",       decimals: 0 },
+  { prefix: "",  value: 3,   suffix: "",   label: "Internships",         sub: "Fine IT · Developers Hub · ITSOLERA", decimals: 0 },
 ];
 
 const StatsCounter = () => {

@@ -8,8 +8,8 @@
 
 ## 👋 About Me
 
-Final-year Computer Science student specializing in **Data Science** at HITEC University, Taxila.  
-I turn raw data into business decisions — dashboards, ML models, and ETL pipelines using real-world datasets.
+BSCS graduate specializing in **Data Science** from HITEC University, Taxila.  
+I turn raw data into business decisions — dashboards, ML models, and ETL pipelines using real-world datasets. Currently building SaaS products at Fine IT.
 
 - 📊 Built a **$1.1M sales dashboard** on GCP BigQuery + Power BI
 - 🤖 Engineered an **LSTM model with 99%+ accuracy** for human activity recognition
@@ -75,4 +75,4 @@ npm run dev
 
 ---
 
-© 2026 Waqas Ahmed · Taxila, Pakistan
+© 2026 Waqas Ahmed · Islamabad, Pakistan
